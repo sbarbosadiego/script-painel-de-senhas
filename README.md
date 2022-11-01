@@ -1,0 +1,1 @@
+# script-painel-de-senhas
