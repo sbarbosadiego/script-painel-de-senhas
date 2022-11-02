@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
+
 mkdir chinchila-online-arquivos && cd chinchila-online-arquivos
-wget -q <link>
+wget -q https://cdn.discordapp.com/attachments/981227657595330623/1029111840929746974/logo_a7.png
 echo -n "===================================================
 (1)Padrão
 (2)Maxi Popular
@@ -12,19 +13,19 @@ read css
 case $css in
 	1)
 		echo "Baixado Painel Padrão"
-		wget -q <link>
+		wget -q https://github.com/DiegoBarbosa-S/script-painel-de-senhas/blob/6d0144db79086cb9f6b9172fabc13fbe1cde1108/css/padr%C3%A3o/atendimento.css
 		;;
 	2)
 		echo "Baixado Painel Maxi Popular"
-		wget -q <link>
+		wget -q https://github.com/DiegoBarbosa-S/script-painel-de-senhas/blob/6d0144db79086cb9f6b9172fabc13fbe1cde1108/css/maxi-popular/atendimento.css
 		;;
 	3)
 		echo "Baixado Painel Ultra Popular"
-		wget -q <link>
+		wget -q https://github.com/DiegoBarbosa-S/script-painel-de-senhas/blob/6d0144db79086cb9f6b9172fabc13fbe1cde1108/css/ultra-popular/atendimento.css
 		;;
 	4)
 		echo "Baixado Painel Escuro"
-		wget -q <link>
+		wget -q https://github.com/DiegoBarbosa-S/script-painel-de-senhas/blob/6d0144db79086cb9f6b9172fabc13fbe1cde1108/css/escuro/atendimento.css
 		;;	
 esac
 cd -
