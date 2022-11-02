@@ -1,0 +1,450 @@
+/* Geral */
+* {
+  /* por padrÃ£o, todo mundo sem margem e sem padding */
+  margin: 0 !important; /* !important: clean.css (tema escolhido no Main.gwt.xml) declara 10px */
+  padding: 0 !important; /* !important: para garantir :) */
+}
+
+/* 
+Se quero usar elementos com 100% da altura da viewport, preciso que os parents tambÃ©m estejam com
+100% da viewport, pois o padrÃ£o para height Ã© auto, que, PARA HEIGHT Ã© indefinido (o padrÃ£o para 
+width tambÃ©m Ã© auto, mas significa 100%)
+
+ReferÃªncia: 
+  http://www.maujor.com/blog/2013/03/08/por-que-height-100-nao-funciona/
+*/
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+.fontePadrao{
+  font-weight: 100 !important;
+  font-family: "roboto" !important;
+  font-size: 45px !important;
+  color: black !important;
+}
+
+/* http://stackoverflow.com/a/4407335/3366578 */
+.desabilitaSelecao {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  /*user-select: none;*/
+}
+
+.popup{
+  border: none !important;
+  border-radius: 2vh !important;
+  padding: 2vh !important;
+  max-width: 85%;
+}
+
+.popupMessageContainer{
+  color: black;
+  font-size: 6vh;
+}
+
+.popupMessageTitulo{
+  font-weight: 300;
+}
+
+.popupMessageConteudo{
+  font-size: 4vh;
+}
+
+.divCentroPai{
+  position: relative;
+}
+
+.divCentroFilho{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.senhaContainerPrincipal{
+  height: 100%;
+  text-align: center;
+
+  /* http://www.colorzilla.com/gradient-editor/ */
+  background: #E30513;
+  /*
+  background: -moz-linear-gradient(-45deg,  #abbd73 0%, #e4efc0 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#abbd73), color-stop(100%,#e4efc0));
+  background: -webkit-linear-gradient(-45deg,  #abbd73 0%,#e4efc0 100%);
+  background: -o-linear-gradient(-45deg,  #abbd73 0%,#e4efc0 100%);
+  background: -ms-linear-gradient(-45deg,  #abbd73 0%,#e4efc0 100%);
+  background: linear-gradient(135deg,  #abbd73 0%,#e4efc0 100%);
+  */
+}
+
+.senhaContainerPrincipalInterno{
+  width: 100%;
+}
+
+.senhaTitulo{
+  box-sizing: border-box;
+  padding-top: 1% !important;
+  height: 12%;
+  font-size: 8vh !important;
+  font-weight: bold;
+}
+
+.senhaContainerBotoes{
+  height: 88%;
+  box-sizing: border-box;
+  text-align: center;
+  /*background-color: #ccff00;*/
+}
+
+.senhaBotaoServico{
+  /* 16:9
+  box-sizing: border-box;
+  font-size: 12vh !important;
+  border: none !important;
+  border-radius: 2vh !important;
+  margin: 2vh !important;
+  padding: 2vh !important;
+  background-image: none !important;
+  width: 80%;
+  */
+
+  /* 4:3 */
+  box-sizing: border-box;
+  font-size: 7vw !important;
+  border: none !important;
+  border-radius: 2vw !important;
+  margin: 2vw !important;
+  padding: 2vw !important;
+  background-image: none !important;
+  width: 90%;
+
+  background: #0074bb !important;
+  /*
+  background: rgb(1,156,184) !important;
+  background: -moz-linear-gradient(top,  rgba(1,156,184,1) 0%, rgba(0,186,211,1) 85%) !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(1,156,184,1)), 
+    color-stop(85%,rgba(0,186,211,1))) !important;
+  background: -webkit-linear-gradient(top,  rgba(1,156,184,1) 0%,rgba(0,186,211,1) 85%) !important;
+  background: -o-linear-gradient(top,  rgba(1,156,184,1) 0%,rgba(0,186,211,1) 85%) !important;
+  background: -ms-linear-gradient(top,  rgba(1,156,184,1) 0%,rgba(0,186,211,1) 85%) !important;
+  background: linear-gradient(to bottom,  rgba(1,156,184,1) 0%,rgba(0,186,211,1) 85%) !important;
+  */
+}
+
+.senhaBotaoServico:active{
+  border: none !important;
+
+  background: #0074bb !important;
+
+  /*
+  background: rgb(1,208,187) !important;
+  background: -moz-linear-gradient(top,  rgba(1,208,187,1) 0%, rgba(0,225,165,1) 85%) !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(1,208,187,1)), 
+    color-stop(85%,rgba(0,225,165,1))) !important;
+  background: -webkit-linear-gradient(top,  rgba(1,208,187,1) 0%,rgba(0,225,165,1) 85%) !important;
+  background: -o-linear-gradient(top,  rgba(1,208,187,1) 0%,rgba(0,225,165,1) 85%) !important;
+  background: -ms-linear-gradient(top,  rgba(1,208,187,1) 0%,rgba(0,225,165,1) 85%) !important;
+  background: linear-gradient(to bottom,  rgba(1,208,187,1) 0%,rgba(0,225,165,1) 85%) !important;
+  */
+}
+
+.senhaBotaoServico:disabled{
+  color: #999999!important;
+
+  background: #0074bb !important;
+
+  /*
+  background: rgb(1,110,184)!important;
+  background: -moz-linear-gradient(top,  rgba(1,110,184,1) 0%, rgba(0,147,211,1) 85%)!important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(1,110,184,1)), 
+    color-stop(85%,rgba(0,147,211,1)))!important;
+  background: -webkit-linear-gradient(top,  rgba(1,110,184,1) 0%,rgba(0,147,211,1) 85%)!important;
+  background: -o-linear-gradient(top,  rgba(1,110,184,1) 0%,rgba(0,147,211,1) 85%)!important;
+  background: -ms-linear-gradient(top,  rgba(1,110,184,1) 0%,rgba(0,147,211,1) 85%)!important;
+  background: linear-gradient(to bottom,  rgba(1,110,184,1) 0%,rgba(0,147,211,1) 85%)!important;
+  */
+}
+
+.senhaDescricaoServico{
+  position: relative;
+  top: -1vh!important;
+  font-size: 4vh!important;
+}
+
+.senhaPopupSenhaGerada{
+  border: none !important;
+  border-radius: 2vh !important;
+  padding: 2vh !important;
+  max-width: 85%;
+
+  background-color: #0074BBDd !IMPORTant;
+  //background-color: rgba(150,174,101,.9)!important;
+}
+
+.senhaPopupSenhaGeradaContainer{
+  /*  color: black;*/
+  font-size: 6vh;
+  /*background-color: greenyellow!important;*/
+  text-align: center;
+}
+
+.senhaPopupSenhaGeradaLabel{
+  font-weight: 300;
+  width: 100%;
+  /*background-color: red!important;*/
+}
+
+.senhaPopupSenhaGeradaValor{
+  font-size: 26vh;
+  font-weight: 500;
+  text-align: center;
+  /*background-color: blue!important;*/
+}
+
+.senhaContainerSenhaGerada{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popupLabelSenhaGerada{
+  background-color: #2AB5F7;
+  width: 50vw;
+
+  box-sizing: border-box;
+  font-size: 12vh !important;
+  border-radius: 2vh !important;
+  padding: 2vh !important;
+}
+
+.painelContainerPrincipal{
+  width: 100%;
+  height: 100%;
+
+  background: #E30513;
+  /*
+  background: -moz-linear-gradient(-45deg,  #abbd73 0%, #e4efc0 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#abbd73), 
+    color-stop(100%,#e4efc0));
+  background: -webkit-linear-gradient(-45deg,  #abbd73 0%,#e4efc0 100%);
+  background: -o-linear-gradient(-45deg,  #abbd73 0%,#e4efc0 100%);
+  background: -ms-linear-gradient(-45deg,  #abbd73 0%,#e4efc0 100%);
+  background: linear-gradient(135deg,  #abbd73 0%,#e4efc0 100%);
+  */
+}
+
+/* TODO: fazer versÃ£o para tela 4:3 (alterar float, width e height dos divs:
+         painelContainerCentral, 
+         painelContainerLogo, 
+         painelContainerData, 
+         painelContainerUltimaSenha, 
+*/
+
+.painelContainerData{
+  box-sizing: border-box;
+  padding: 2vh 0 0 2vh !important;
+
+  width: 30%;
+  height: 28%;
+
+  background-color: #E30513;
+}
+
+.painelContainerDataInterno{
+  padding: 2vh !important;
+
+  background-color: #FFDD00!important;
+
+  /*background-color: #ffffcc !important;*/
+}
+
+.painelContainerDataInternoCentro{
+  width: 100%;
+  text-align: center;
+
+  /*background-color: #009999;*/
+}
+
+.painelLabelData{
+  vertical-align:middle;
+  font-size: 5vh !important;
+
+  /*background-color: #ffcc00;*/
+}
+
+.painelLabelHora{
+  vertical-align:middle;
+  font-size: 9vh !important;
+  font-weight: 300;
+
+  /*background-color: #ffcc00;*/
+}
+
+.painelLabelDiaSemana{
+  height: 50%;
+  width: 100%;
+
+  font-size: 7vh !important;
+
+  /*background-color: #00ff00;*/
+}
+
+.painelContainerUltimaSenha{
+  box-sizing: border-box;
+  padding: 2vh !important;
+  padding-right: 0px !important;
+
+  width: 30%;
+  height: 72%;
+
+  /*background-color: #ccffcc;*/
+}
+
+.painelContainerUltimaSenhaInterno{
+  padding: 1vh !important;
+  background-color: #FFDD00 !important;
+  //color: #!important;
+  /*background-color: #ff3333 !important;*/
+}
+
+.painelContainerUltimaSenhaInternoCentro{
+  width: 100%;
+  text-align: center;
+
+  /*background-color: #009999;*/
+}
+
+.painelUltimasSenhasChamadasContainer{
+  /*background-color: #2AB5F7;*/
+}
+
+.painelUltimasSenhasChamadasGrid {
+  border-collapse: collapse;
+  margin: 0 auto !important; /* Margem padrÃ£o sobrescrita para centralizaÃ§Ã£o da tabela */
+  vertical-align:middle;
+  width: 95%;
+}
+
+.painelUltimasSenhasChamadasGridHeader {
+  font-family: "roboto"; /* Restabelece-se a fonte pois nÃ£o estava sendo devidamente herdada */
+  font-size: 5vh !important;
+  font-weight: 100;
+  width: 50%;
+}
+
+.painelUltimasSenhasChamadasGridFirstRow {
+  background-color: #fcfc84;
+  color: #ffffff;
+  font-family: "roboto"; /* Restabelece-se a fonte pois nÃ£o estava sendo devidamente herdada */
+  font-size: 7vh !important;
+  font-weight: 300;
+  width: 50%;
+}
+
+.painelUltimasSenhasChamadasGridRow {
+  /*background-color: #00FFFF;*/
+  font-family: "roboto"; /* Restabelece-se a fonte pois nÃ£o estava sendo devidamente herdada */
+  font-size: 7vh !important;
+  font-weight: 100;
+  width: 50%;
+}
+
+.painelContainerCentral{
+  box-sizing: border-box;
+  padding: 2vh !important;
+
+  width: 70%;
+  height: 100%;
+
+  float: right;
+}
+
+.painelContainerCentralInterno{
+  background-color: white !important;
+}
+
+.painelContainerChamadaSenha{
+  width: 100%;
+  height: 100%;
+
+  background-color: #f9ff2e;
+  border-radius: 2vh !important;
+}
+
+.painelContainerChamadaSenhaInterno{
+  text-align: center;
+  width: 100%;
+
+  font-size: 16vh;
+}
+
+.painelChamadaSenhaSenhaContainer{
+  /*background-color: #2AB5F7;*/
+}
+
+.painelChamadaSenhaSenhaLabel{
+  vertical-align:middle;
+}
+
+.painelChamadaSenhaSenhaValor{
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 160%;
+}
+
+.painelChamadaSenhaGuicheContainer{
+  /*background-color: #FFFF55;*/
+}
+
+.painelChamadaSenhaGuicheLabel{
+  vertical-align:middle;
+}
+
+.painelChamadaSenhaGuicheValor{
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 160%;
+}
+
+.painelContainerPublicidade{
+  box-sizing: border-box;
+  padding: 1vh !important;
+
+  width: 100%;
+  height: 100%;
+}
+
+.painelContainerPublicidadeInterno{
+  width: 100%;
+  height: 100%;
+  background-color: white !important;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* nÃ£o Ã© standard :) */
+  transition: background-image 1s ease-in-out;
+}
+
+.painelContainerInterno{
+  box-sizing: border-box;
+
+  border-radius: 2vh !important;
+  box-shadow: 3px 3px 6px 0px rgba(120, 120, 120, 0.31);
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #FFDD00;
+}
+
+.fundoDebug{
+  background-color: #ccffcc;
+}
