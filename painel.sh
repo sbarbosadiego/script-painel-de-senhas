@@ -13,19 +13,19 @@ read css
 case $css in
 	1)
 		echo "Baixado Painel Padrão"
-		wget -q https://raw.githubusercontent.com/BillyaD/script-painel-de-senhas/main/css/padr%C3%A3o/atendimento.css
+		wget -q https://cdn.discordapp.com/attachments/1041677457989840959/1041677739142426714/atendimento.css
 		;;
 	2)
 		echo "Baixado Painel Maxi Popular"
-		wget -q https://raw.githubusercontent.com/BillyaD/script-painel-de-senhas/main/css/maxi-popular/atendimento.css
+		wget -q https://cdn.discordapp.com/attachments/1041677457989840959/1041677968633774130/atendimento.css
 		;;
 	3)
 		echo "Baixado Painel Ultra Popular"
-		wget -q https://raw.githubusercontent.com/BillyaD/script-painel-de-senhas/main/css/ultra-popular/atendimento.css
+		wget -q https://cdn.discordapp.com/attachments/1041677457989840959/1041678182555861002/atendimento.css
 		;;
 	4)
 		echo "Baixado Painel Escuro"
-		wget -q https://raw.githubusercontent.com/BillyaD/script-painel-de-senhas/main/css/escuro/atendimento.css
+		wget -q https://cdn.discordapp.com/attachments/1041677457989840959/1041678370146099200/atendimento.css
 		;;	
 esac
 cd -
