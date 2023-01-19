@@ -18,7 +18,7 @@ fi
 # Caso tenha selecionado S, será dado sequência com o script do painel
 cd /home/alpha7
 mkdir chinchila-online-arquivos && cd chinchila-online-arquivos
-wget -q https://cdn.discordapp.com/attachments/981227657595330623/1029111840929746974/logo_a7.png
+wget -q <logo-link>
 # Selecionar o tema do painel de senhas, sempre é bom verificar com o cliente qual a rede do mesmo
 while [[ ! "$css" =~ [1234] ]]; do
 	echo -n "=================================================================
@@ -34,19 +34,19 @@ done
 case $css in
 	1)
 		echo "Baixado Painel Padrão"
-		wget -q https://cdn.discordapp.com/attachments/1041677457989840959/1041677739142426714/atendimento.css
+		wget -q <link1>
 		;;
 	2)
 		echo "Baixado Painel Maxi Popular"
-		wget -q https://cdn.discordapp.com/attachments/1041677457989840959/1041677968633774130/atendimento.css
+		wget -q <link2>
 		;;
 	3)
 		echo "Baixado Painel Ultra Popular"
-		wget -q https://cdn.discordapp.com/attachments/1041677457989840959/1041678182555861002/atendimento.css
+		wget -q <link3>
 		;;
 	4)
 		echo "Baixado Painel Escuro"
-		wget -q https://cdn.discordapp.com/attachments/1041677457989840959/1041678370146099200/atendimento.css
+		wget -q <link4>
 		;;	
 esac
 cd -
