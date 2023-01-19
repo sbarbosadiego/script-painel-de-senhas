@@ -1,2 +1,3 @@
 # script-painel-de-senhas
-Esse projeto surgiu com a ideia de facilitar a configuração e criação de arquivos para um painel de senhas, esse mesmo é aplicável somente para empresa <a href="https://a7.net.br/"> Alpha7 Desenvolvimento de Software</a>, e incluído aqui para fins de estudo.<p></p>
+Desenvolvi este script para facilitar a configuração do painel de atendimento, onde acabava sendo preciso fazer ações manuais como criar pastas e arquivos de textos manualmente.
+Esse mesmo é aplicável somente para empresa <a href="https://a7.net.br/"> Alpha7 Desenvolvimento de Software</a>, e incluído aqui para fins de estudo.<p></p>
